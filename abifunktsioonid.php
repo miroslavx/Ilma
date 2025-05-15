@@ -72,11 +72,11 @@ function grupinimiKontroll($grupinimi){
     global $yhendus;
     $kask=$yhendus->prepare("SELECT * FROM kaubagrupid WHERE grupinimi LIKE ?");
     $kask->bind_param("s", $grupinimi);
-   if($kask->execute()){
-       $kask->store_result();
-       $rida=$kask->num_rows;
-       return $rida;
-   }
+    if($kask->execute()){
+        $kask->store_result();
+        $rida=$kask->num_rows;
+        return $rida;
+    }
 }
 ?>
 <!--väljastab kõik andmetabeli andmed massivina
